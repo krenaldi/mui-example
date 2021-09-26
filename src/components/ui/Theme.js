@@ -1,16 +1,35 @@
 import { createTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+
+const arcBlue = "#0B72B9";
+const arcOrange = "#FFBA60";
 
 const theme = createTheme({
   palette: {
+    common: {
+      blue: `${arcBlue}`,
+      orange: `${arcOrange}`
+    },
     primary: {
-      main: purple[500],
+      main: `${arcBlue}`,
     },
     secondary: {
-      main: green[500],
+      main: `${arcOrange}`,
     },
   },
+  typography: {
+    tab: {
+      fontFamily: "Raleway",
+      textTransform: "none",
+      fontWeight: 700,
+      fontSize: "1rem"
+    },
+    estimate: {
+      fontFamily: "Oswald",
+      fontSize: "1rem",
+      textTransform: "none",
+      color: "#FFFFFF"
+    }
+  }
 });
 
 export default theme;
