@@ -84,6 +84,16 @@ const useStyles = makeStyles((theme) => ({
       opacity: 1,
     },
   },
+  drawerIconContainer: {
+    marginLeft: "auto",
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
+  },
+  drawerIcon: {
+    width: "50px",
+    height: "50px"
+  }
 }));
 
 const Header = (props) => {
@@ -267,8 +277,8 @@ const Header = (props) => {
       >
         Example Drawer
       </SwipeableDrawer>
-      <IconButton onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
-        <MenuIcon />
+      <IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
+        <MenuIcon className={classes.drawerIcon} />
       </IconButton>
     </>
   );
