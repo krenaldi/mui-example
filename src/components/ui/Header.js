@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   AppBar,
   Toolbar,
@@ -111,11 +111,11 @@ const useStyles = makeStyles((theme) => ({
   drawerItemSelected: {
     "& .MuiListItemText-root": {
       opacity: 1,
-    }
+    },
   },
   appbar: {
-    zIndex: theme.zIndex.modal + 1
-  }
+    zIndex: theme.zIndex.modal + 1,
+  },
 }));
 
 const Header = (props) => {
@@ -150,29 +150,32 @@ const Header = (props) => {
     setSelectedIndex(i);
   };
 
-  const options = [
-    { name: "Services", link: "/services", activeIndex: 1, selectedIndex: 0 },
-    {
-      name: "Customer Software Development",
-      link: "/customsoftware",
-      activeIndex: 1,
-      selectedIndex: 1,
-    },
-    {
-      name: "Mobile App Development",
-      link: "/mobileapps",
-      activeIndex: 1,
-      selectedIndex: 2,
-    },
-    {
-      name: "Website Development",
-      link: "/websites",
-      activeIndex: 1,
-      selectedIndex: 3,
-    },
-  ];
+  const options = useMemo(
+    () => [
+      { name: "Services", link: "/services", activeIndex: 1, selectedIndex: 0 },
+      {
+        name: "Customer Software Development",
+        link: "/customsoftware",
+        activeIndex: 1,
+        selectedIndex: 1,
+      },
+      {
+        name: "Mobile App Development",
+        link: "/mobileapps",
+        activeIndex: 1,
+        selectedIndex: 2,
+      },
+      {
+        name: "Website Development",
+        link: "/websites",
+        activeIndex: 1,
+        selectedIndex: 3,
+      },
+    ],
+    []
+  );
 
-  const routes = [
+  const routes = useMemo(() => [
     { name: "Home", link: "/", activeIndex: 0 },
     {
       name: "Services",
@@ -185,7 +188,7 @@ const Header = (props) => {
     { name: "The Revolution", link: "/revolution", activeIndex: 2 },
     { name: "About Us", link: "/about", activeIndex: 3 },
     { name: "Contact Us", link: "/contact", activeIndex: 4 },
-  ];
+  ], [anchorEl]);
 
   useEffect(() => {
     [...options, ...routes].forEach((route) => {
@@ -242,7 +245,7 @@ const Header = (props) => {
         classes={{ paper: classes.menu }}
         MenuListProps={{ onMouseLeave: handleClose }}
         elevation={0}
-        style={{zIndex: 1302}}
+        style={{ zIndex: 1302 }}
         keepMounted
       >
         {options.map((option, i) => (
