@@ -118,12 +118,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = (props) => {
-  const [value, setValue] = useState(0);
+const Header = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const classes = useStyles();
   const theme = useTheme();
@@ -175,20 +173,23 @@ const Header = (props) => {
     []
   );
 
-  const routes = useMemo(() => [
-    { name: "Home", link: "/", activeIndex: 0 },
-    {
-      name: "Services",
-      link: "/services",
-      activeIndex: 1,
-      AriaOwns: anchorEl ? "simple-menu" : undefined,
-      ariaPopup: anchorEl ? true : undefined,
-      mouseOver: (event) => handleClick(event),
-    },
-    { name: "The Revolution", link: "/revolution", activeIndex: 2 },
-    { name: "About Us", link: "/about", activeIndex: 3 },
-    { name: "Contact Us", link: "/contact", activeIndex: 4 },
-  ], [anchorEl]);
+  const routes = useMemo(
+    () => [
+      { name: "Home", link: "/", activeIndex: 0 },
+      {
+        name: "Services",
+        link: "/services",
+        activeIndex: 1,
+        AriaOwns: anchorEl ? "simple-menu" : undefined,
+        ariaPopup: anchorEl ? true : undefined,
+        mouseOver: (event) => handleClick(event),
+      },
+      { name: "The Revolution", link: "/revolution", activeIndex: 2 },
+      { name: "About Us", link: "/about", activeIndex: 3 },
+      { name: "Contact Us", link: "/contact", activeIndex: 4 },
+    ],
+    [anchorEl]
+  );
 
   useEffect(() => {
     [...options, ...routes].forEach((route) => {
@@ -205,7 +206,7 @@ const Header = (props) => {
           break;
       }
     });
-  }, [value, options, routes, selectedIndex]);
+  }, [value, setValue, options, routes, selectedIndex, setSelectedIndex]);
 
   const tabs = (
     <>
