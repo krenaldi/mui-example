@@ -62,7 +62,7 @@ const Footer = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
   return (
     <footer className={classes.footer}>
       <Hidden smDown>
-        <Grid container className={classes.mainContainer} justify="center">
+        <Grid container className={classes.mainContainer} justifyContent="center">
           <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
               <Grid
@@ -112,7 +112,7 @@ const Footer = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
                 to="/mobileapps"
                 className={classes.link}
               >
-                Mobile App Development
+                iOS/Android App Development
               </Grid>
               <Grid
                 item
@@ -219,7 +219,7 @@ const Footer = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
         alt="decorative footer adornment"
         className={classes.adornment}
       />
-      <Grid container spacing={2} className={classes.socialContainer} justify="flex-end">
+      <Grid container spacing={2} className={classes.socialContainer} justifyContent="flex-end">
         <Grid item component={"a"} href="http://www.facebook.com" rel="noopener noreferrer" target="_blank">
           <img src={facebook} alt="facebook icon" className={classes.icon} />
         </Grid>
