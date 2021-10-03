@@ -1,10 +1,10 @@
 import React from "react";
-import Lottie from "react-lottie";
+import { useLottie } from "lottie-react";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import { Grid, Button, Typography, useMediaQuery } from "@material-ui/core";
 import ButtonArrow from "../components/ui/ButtonArrow";
 
-import animationData from "../animations/landinganimation/data";
+import landingAnimation from "../animations/landinganimation/data.js";
 import customSoftwareIcon from "../assets/Custom Software Icon.svg";
 import mobileIcon from "../assets/mobileIcon.svg";
 import websiteIcon from '../assets/websiteIcon.svg';
@@ -96,11 +96,13 @@ const LandingPage = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: landingAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  const { View } = useLottie(defaultOptions);
 
   return (
     <Grid container direction="column" className={classes.mainContainer}>
@@ -140,7 +142,8 @@ const LandingPage = () => {
             </Grid>
           </Grid>
           <Grid item sm className={classes.animation}>
-            <Lottie options={defaultOptions} height={"100%"} width={"100%"} />
+            {/* <Lottie options={defaultOptions} height={"100%"} width={"100%"} /> */}
+            {View}
           </Grid>
         </Grid>
       </Grid>
