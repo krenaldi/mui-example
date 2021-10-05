@@ -205,6 +205,9 @@ const Header = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
             }
           }
           break;
+        case "/estimate":
+          setValue(5);
+          break;
         default:
           break;
       }
@@ -238,6 +241,7 @@ const Header = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
         className={classes.button}
         component={Link}
         to="/estimate"
+        onClick={() => setValue(5)}
       >
         Free Estimate
       </Button>
