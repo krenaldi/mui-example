@@ -304,7 +304,7 @@ const Revolution = () => {
           </Typography>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={review} alt="Basic Website Design Outline" />
+          <img src={review} alt="Magnifying glass" />
         </Grid>
       </Grid>
       <Grid
@@ -342,7 +342,7 @@ const Revolution = () => {
           </Typography>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={design} alt="Basic Website Design Outline" />
+          <img src={design} alt="Paintbrush leaving stroke of paint" />
         </Grid>
       </Grid>
       <Grid
@@ -379,7 +379,7 @@ const Revolution = () => {
           </Typography>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={review} alt="Basic Website Design Outline" />
+          <img src={review} alt="Magnifying glass" />
         </Grid>
       </Grid>
       <Grid
@@ -451,7 +451,7 @@ const Revolution = () => {
           </Typography>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={build} alt="Basic Website Design Outline" />
+          <img src={build} alt="Building construction site" />
         </Grid>
       </Grid>
       <Grid
@@ -498,7 +498,7 @@ const Revolution = () => {
           </Typography>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={launch} alt="Basic Website Design Outline" />
+          <img src={launch} alt="Rocket ship" />
         </Grid>
       </Grid>
       <Grid
@@ -544,7 +544,7 @@ const Revolution = () => {
           </Typography>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={maintain} alt="Basic Website Design Outline" />
+          <img src={maintain} alt="Wrench tightening bolts" />
         </Grid>
       </Grid>
       <Grid
@@ -590,7 +590,7 @@ const Revolution = () => {
           </Typography>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={iterate} alt="Basic Website Design Outline" />
+          <img src={iterate} alt="Falling dominoes" />
         </Grid>
       </Grid>
     </Grid>
