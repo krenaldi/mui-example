@@ -12,6 +12,7 @@ import maintain from "../assets/maintainIcon.svg";
 import iterate from "../assets/iterateIcon.svg";
 
 import TechAnimation from "./ui/TechAnimation";
+import CallToAction from './ui/CallToAction';
 
 const useStyles = makeStyles((theme) => ({
   rowContainer: {
@@ -24,12 +25,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Revolution = () => {
+const Revolution = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <Grid container direction="column">
@@ -784,6 +784,9 @@ const Revolution = () => {
         <Grid item lg style={{ alignSelf: "center" }}>
           <img src={iterate} alt="Falling dominoes" width="100%" />
         </Grid>
+      </Grid>
+      <Grid item>
+        <CallToAction setValue={props.setValue} />
       </Grid>
     </Grid>
   );
