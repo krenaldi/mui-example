@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { makeStyles, useTheme } from '@material-ui/styles';
-import { Grid, Typography, Button, useMediaQuery } from '@material-ui/core';
-import ButtonArrow from './ui/ButtonArrow';
+import { Link } from "react-router-dom";
+import { makeStyles, useTheme } from "@material-ui/styles";
+import { Grid, Typography, Button, useMediaQuery } from "@material-ui/core";
+import ButtonArrow from "./ui/ButtonArrow";
 
 import customSoftwareIcon from "../assets/Custom Software Icon.svg";
 import mobileIcon from "../assets/mobileIcon.svg";
@@ -45,7 +45,13 @@ const Services = (setValue, setSelectedIndex) => {
 
   return (
     <Grid container direction="column">
-      <Grid item style={{ marginLeft: matchesSM ? 0 : " 5em", marginTop: matchesSM ? "1em" : "2em" }}>
+      <Grid
+        item
+        style={{
+          marginLeft: matchesSM ? 0 : " 5em",
+          marginTop: matchesSM ? "1em" : "2em",
+        }}
+      >
         <Typography
           variant="h2"
           gutterBottom
@@ -211,6 +217,6 @@ const Services = (setValue, setSelectedIndex) => {
       </Grid>
     </Grid>
   );
-}
+};
 
-export default Services
+export default Services;

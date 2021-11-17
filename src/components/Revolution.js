@@ -12,7 +12,7 @@ import maintain from "../assets/maintainIcon.svg";
 import iterate from "../assets/iterateIcon.svg";
 
 import TechAnimation from "./ui/TechAnimation";
-import CallToAction from './ui/CallToAction';
+import CallToAction from "./ui/CallToAction";
 
 const useStyles = makeStyles((theme) => ({
   rowContainer: {

@@ -21,7 +21,7 @@ import ScaleAnimation from "./ui/ScaleAnimation";
 import AutomationAnimation from "./ui/AutomationAnimation";
 import UXAnimation from "./ui/UXAnimation";
 
-import CallToAction from './ui/CallToAction';
+import CallToAction from "./ui/CallToAction";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -58,7 +58,7 @@ const CustomSoftware = (props) => {
         container
         direction="row"
         justifyContent={matchesMD ? "center" : undefined}
-        style={{ marginTop: matchesXS ? "1em" : "2em"}}
+        style={{ marginTop: matchesXS ? "1em" : "2em" }}
       >
         <Hidden mdDown>
           <Grid

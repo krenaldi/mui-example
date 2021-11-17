@@ -3,10 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Hidden } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import footerAdornment from "../../assets/Footer Adornment.svg";
-import facebook from '../../assets/facebook.svg';
+import facebook from "../../assets/facebook.svg";
 import twitter from "../../assets/twitter.svg";
 import instagram from "../../assets/instagram.svg";
-
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -62,7 +61,11 @@ const Footer = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
   return (
     <footer className={classes.footer}>
       <Hidden smDown>
-        <Grid container className={classes.mainContainer} justifyContent="center">
+        <Grid
+          container
+          className={classes.mainContainer}
+          justifyContent="center"
+        >
           <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
               <Grid
@@ -219,14 +222,37 @@ const Footer = ({ value, setValue, selectedIndex, setSelectedIndex }) => {
         alt="decorative footer adornment"
         className={classes.adornment}
       />
-      <Grid container spacing={2} className={classes.socialContainer} justifyContent="flex-end">
-        <Grid item component={"a"} href="http://www.facebook.com" rel="noopener noreferrer" target="_blank">
+      <Grid
+        container
+        spacing={2}
+        className={classes.socialContainer}
+        justifyContent="flex-end"
+      >
+        <Grid
+          item
+          component={"a"}
+          href="http://www.facebook.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={facebook} alt="facebook icon" className={classes.icon} />
         </Grid>
-        <Grid item component={"a"} href="http://www.twitter.com" rel="noopener noreferrer" target="_blank">
+        <Grid
+          item
+          component={"a"}
+          href="http://www.twitter.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={twitter} alt="twitter icon" className={classes.icon} />
         </Grid>
-        <Grid item component={"a"} href="http://www.instagram.com" rel="noopener noreferrer" target="_blank">
+        <Grid
+          item
+          component={"a"}
+          href="http://www.instagram.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={instagram} alt="instagram icon" className={classes.icon} />
         </Grid>
       </Grid>

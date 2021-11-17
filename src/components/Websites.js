@@ -14,7 +14,7 @@ import analytics from "../assets/analytics.svg";
 import seo from "../assets/seo.svg";
 import outreach from "../assets/outreach.svg";
 import ecommerce from "../assets/ecommerce.svg";
-import CallToAction from './ui/CallToAction';
+import CallToAction from "./ui/CallToAction";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -32,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paragraphContainer: {
-    maxWidth: "30em"
-  }
+    maxWidth: "30em",
+  },
 }));
 
 const Websites = (props) => {

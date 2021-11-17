@@ -1,4 +1,4 @@
-import { createTheme } from '@material-ui/core/styles';
+import { createTheme } from "@material-ui/core/styles";
 
 const arcBlue = "#0B72B9";
 const arcOrange = "#FFBA60";
@@ -58,15 +58,15 @@ const theme = createTheme({
       fontWeight: 300,
       color: "#FFFFFF",
     },
-    body1 : {
+    body1: {
       fontSize: "1,25em",
       color: arcGrey,
-      fontWeight: 300
+      fontWeight: 300,
     },
     caption: {
       fontSize: "1rem",
       fontWeight: 300,
-      color: arcGrey
+      color: arcGrey,
     },
     learnButton: {
       borderColor: arcBlue,
