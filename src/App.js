@@ -9,7 +9,8 @@ import Services from "./components/Services";
 import CustomSoftware from "./components/CustomSoftware";
 import MobileApps from "./components/MobileApps";
 import Websites from "./components/Websites";
-import Revolution from './components/Revolution';
+import Revolution from "./components/Revolution";
+import About from "./components/About";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -91,7 +92,17 @@ function App() {
               />
             )}
           />
-          <Route exact path="/about" component={() => <div>About</div>} />
+          <Route
+            exact
+            path="/about"
+            render={(props) => (
+              <About
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
           <Route exact path="/contact" component={() => <div>Contact</div>} />
           <Route exact path="/estimate" component={() => <div>Estimate</div>} />
         </Switch>
